@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+## Mr-M custom settings:
+DatabaseLocal/
+
 # User-specific files
 *.rsuser
 *.suo

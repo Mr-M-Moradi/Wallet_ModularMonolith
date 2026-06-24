@@ -7,13 +7,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{338CDD60-0A62-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WalletAndTransUI", "WalletAndTransUI\WalletAndTransUI.csproj", "{3939F755-1BEE-4B6C-812A-0FAE08C337AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applicaton", "Applicaton\Applicaton.csproj", "{65EC18FF-723D-4BEB-93A2-385247A0FD65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applicaton", "Applicaton\Applicaton.csproj", "{65EC18FF-723D-4BEB-93A2-385247A0FD65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3B13F70E-F3A7-4B20-99F3-221DA514C9D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3B13F70E-F3A7-4B20-99F3-221DA514C9D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{8A9B5B9B-0E89-42DF-910A-E62577C7ED76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{8A9B5B9B-0E89-42DF-910A-E62577C7ED76}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseLocal", "DatabaseLocal\DatabaseLocal.sqlproj", "{61BF9298-970E-4974-B3D3-D9CF54D65588}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A34B2E84-C3A3-4C94-8ECD-AA83DD2E86C4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
