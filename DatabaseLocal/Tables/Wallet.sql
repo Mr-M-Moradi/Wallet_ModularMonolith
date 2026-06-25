@@ -1,6 +1,0 @@
-﻿CREATE TABLE [dbo].[Wallet]
-(
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [UserId] NCHAR(20) NOT NULL, 
-    [Balance] DECIMAL(20, 1) NULL DEFAULT 0
-)
