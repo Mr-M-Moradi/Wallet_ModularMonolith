@@ -15,9 +15,5 @@ namespace Domain.Entities
 
         public readonly object LockObject = new object();
 
-
-
-
-
     }
 }
