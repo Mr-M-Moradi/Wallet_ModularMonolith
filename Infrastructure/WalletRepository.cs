@@ -20,7 +20,6 @@ namespace Infrastructure
         }
 
 
-        //interfaceپیاده سازی 
         public Wallet Create(Wallet newWallet)
         {
             _DbWallets.Add(newWallet);
