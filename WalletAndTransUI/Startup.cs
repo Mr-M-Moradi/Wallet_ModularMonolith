@@ -1,4 +1,5 @@
 ﻿using Application;
+using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
@@ -31,14 +32,14 @@ namespace WalletAndTransUI
 
 
             //var builder = WebApplication.CreateBuilder(args); //for api?
+            
             //1. اددContext برای لایه زیرساخت
             services.AddDbContext<WalletDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default"))); //ست کردن کانکشن استرینگ در ادامش بصورت لامبدا
-            //2. تعریف اینترفیس و پیادهسازی Dependency 
-            services.AddScoped<IWalletRepository, WalletDbContext>();
-            //services.AddScoped<ITransactionRepository, TransactionRepository>();
-            //3.ادد کردن لایه ی اپلیکیشن برای دسترسی UI
-            services.AddScoped<CreateWallet>();
+            //2. اضافه کردن اینترفیس و پیادهسازی Dependency 
+            services.AddScoped<IWalletRepository, WalletRepository>();
+            
+
             //var app = builder.Build(); //for api?
 
         }

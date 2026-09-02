@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,8 @@ namespace Domain.Interfaces
     public interface IWalletRepository
     {
 
-        bool CreateNewWallet(Guid userID, decimal initialBalance);
+        public Wallet Create(Wallet newWallet);
+        //?      bool CreateNewWallet(Guid userID, decimal initialBalance);
         //?        Task AddAsync(Wallet wallet);
 
         // دریافت کیف پول

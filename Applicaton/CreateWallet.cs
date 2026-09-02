@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Domain.Entities;
+using Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +8,29 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public class CreateWallet
+    public class CreateWallet 
     {
-        // دسترس کنترولر 
-        public bool Create(Guid userID, decimal initialBalance)
+        private readonly IWalletRepository _walletRepository;
+
+        public CreateWallet(IWalletRepository walletRepository)
         {
-            CreateNewWallet(userID, initialBalance);
+            _walletRepository = walletRepository;
+        }
+
+
+        //آبجکت اینجا از روی انتیتی و ولیوی کاربر ساخته میشه و ازطریق اینجکشن برای متد اینترفیس ست میشه واون متد توسط زیرساخت پیاده سازی میشه
+        // دسترس کنترولر یوآی
+        public bool Create(string userID, decimal initialBalance)
+        {
+            var newWallet = new Wallet
+            {
+                Id = Guid.NewGuid(),
+                UserId = userID,
+                Balance = initialBalance
+            };
+            _walletRepository.Create(newWallet);
+
+            return true;
         }
     }
 }

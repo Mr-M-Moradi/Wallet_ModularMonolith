@@ -1,22 +1,25 @@
-﻿using System;
+﻿using Domain.Entities;
+using Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-//using Domain.Wallet;
 
 namespace Infrastructure
 {
-    public class WalletDbContext : DbContext //, IWalletRepository
+    public class WalletDbContext : DbContext
     {
-        private readonly WalletDbContext _context;
-        public WalletDbContext( DbContextOptions<WalletDbContext> options) : base(options)
+        //private readonly WalletDbContext _context =null;
+        public WalletDbContext(DbContextOptions<WalletDbContext> options) : base(options)
         {
-            //_context = context;
+            //_context = Context;
         }
 
-        //public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
+
+
         ////?
         //public AppDbContext(DbContextOptionsBuilder optionsBuilder) : base(options) { optionsBuilder.UseSqlServer(GetConnectionString()); }
 
