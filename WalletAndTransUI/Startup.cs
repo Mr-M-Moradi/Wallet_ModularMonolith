@@ -27,15 +27,11 @@ namespace WalletAndTransUI
 
 
         public void ConfigureServices(IServiceCollection services){
-            services.AddControllersWithViews();// ادد Controllers و Views 
-
-
+            services.AddControllersWithViews();
             
             services.AddDbContext<WalletDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Default"))); //ست کردن کانکشن استرینگ در ادامش بصورت لامبدا
+                options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.AddScoped<IWalletRepository, WalletRepository>();
-            
-
 
         }
 
