@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
+    [Table("Wallet")]
     public class Wallet
     {
         [Key]
