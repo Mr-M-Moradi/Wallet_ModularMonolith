@@ -26,20 +26,13 @@ namespace WalletAndTransUI
         public IConfiguration Configuration { get; }
 
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services){
-            services.AddControllersWithViews();// ادد Controllers و Views 
-
-
+            services.AddControllersWithViews();
             
-            //1. اددContext برای لایه زیرساخت
             services.AddDbContext<WalletDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Default"))); //ست کردن کانکشن استرینگ در ادامش بصورت لامبدا
-            //2. اضافه کردن اینترفیس و پیادهسازی Dependency 
+                options.UseSqlServer(Configuration.GetConnectionString("Default"))); 
+            
             services.AddScoped<IWalletRepository, WalletRepository>();
-
-            //var builder = WebApplication.CreateBuilder(args); //for api?
-            //var app = builder.Build(); //for api?
 
         }
 
