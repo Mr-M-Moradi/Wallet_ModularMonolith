@@ -21,7 +21,7 @@ namespace WalletAndTransUI.Controllers
             _walletRepository = walletRepository;
         }
 
-
+        //localhost:25067/Home/Creat?UserId=001&initialBalance=11
         [HttpGet]
         public string Creat(string UserId, decimal initialBalance)
         {//اینجا از اپلیکیشن شی ساختم و چون استفادم از اپلیکشن به همین مرحله ختم میشه نیازی نیست به روش دپندنسی باشه
@@ -30,7 +30,8 @@ namespace WalletAndTransUI.Controllers
             return result;
         }
 
-        //[HttpGet("{id:guid}")]//?
+
+        //[HttpGet("{id:guid}")]//Deposit سپرده
         // public async Task<IActionResult> Deposit(Guid id, [FromBody] DepositRequest request)//?
         //{
         //    //var command = new DepositCommand(id, request.Amount, request.Currency);
@@ -50,10 +51,6 @@ namespace WalletAndTransUI.Controllers
 
         //    return Ok(result);
         //}
-
-
-//public record DepositRequest(decimal Amount, string Currency);
-
 
 
 

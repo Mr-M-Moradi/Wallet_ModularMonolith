@@ -11,16 +11,12 @@ namespace Domain.Interfaces
     {
 
         public Wallet Create(Wallet newWallet);
-        //?      bool CreateNewWallet(Guid userID, decimal initialBalance);
-        //?        Task AddAsync(Wallet wallet);
+        //?      Task CreateAsync(Wallet newWallet);
+
 
         // دریافت کیف پول
-        //public Wallet GetWallet(Guid walletId);
-
-
-        //public Task<Wallet?> GetByIdAsync(Guid id);
-        //public Task<Wallet?> GetByUserIdAsync(string userId);
-        //Task UpdateAsync(Wallet wallet);
+        //public Task<Wallet?> GetWalletByIdAsync(Guid id);
+        //public Task<Wallet?> GetWalletByUserAsync(string userId);
     }
 }
 

@@ -24,7 +24,7 @@ namespace Application
         {
             var newWallet = new Wallet
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.NewGuid().ToString(),
                 UserId = userID,
                 Balance = initialBalance
             };

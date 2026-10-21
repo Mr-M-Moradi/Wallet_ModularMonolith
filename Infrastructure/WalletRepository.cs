@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
+    //interfaceپیاده سازی 
     public class WalletRepository : IWalletRepository
     {
         private readonly WalletDbContext _context = null;
@@ -20,13 +21,30 @@ namespace Infrastructure
         }
 
 
-        //interfaceپیاده سازی 
         public Wallet Create(Wallet newWallet)
         {
             _DbWallets.Add(newWallet);
-            _context.SaveChanges();
+             _context.SaveChanges(); 
+            //try { } 
+            //catch { throw new ArgumentException("ولت ذخیره نشد"); }
+            
             return newWallet;
         }
+
+
+
+        //        public async Task<Wallet?> GetWalletByIdAsync(Guid id)
+        //        {
+        //            return await _context.Wallets
+        //                .FirstOrDefaultAsync(w => w.Id == id);
+        //        }
+
+        //        public async Task<Wallet?> GetWalletByUserAsync(string userId)
+        //        {
+        //            return await _context.Wallets
+        //                .FirstOrDefaultAsync(w => w.UserId == userId);
+        //        }
+
 
     }
 }

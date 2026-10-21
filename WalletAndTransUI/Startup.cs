@@ -31,15 +31,14 @@ namespace WalletAndTransUI
             services.AddControllersWithViews();// ادد Controllers و Views 
 
 
-            //var builder = WebApplication.CreateBuilder(args); //for api?
             
             //1. اددContext برای لایه زیرساخت
             services.AddDbContext<WalletDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default"))); //ست کردن کانکشن استرینگ در ادامش بصورت لامبدا
             //2. اضافه کردن اینترفیس و پیادهسازی Dependency 
             services.AddScoped<IWalletRepository, WalletRepository>();
-            
 
+            //var builder = WebApplication.CreateBuilder(args); //for api?
             //var app = builder.Build(); //for api?
 
         }
